@@ -3,6 +3,7 @@ package com.lucas.ms.hrpayroll.resources;
 import com.lucas.ms.hrpayroll.entities.Payment;
 import com.lucas.ms.hrpayroll.services.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/payments")
 public class PaymentResource {
+
+    @Value("")
 
     @Autowired
     private PaymentService service;
